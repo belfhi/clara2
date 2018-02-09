@@ -20,11 +20,11 @@
 
 # make the detector class correctly
 
-CC = g++
-CFLAGS = -Wall -O3
+CC = icpc
+CFLAGS = -I${HOME}/.local/include -Wall -O3
 # compile against fftw library
 # http://www.fftw.org/ - an open source FFT library under GPL 2.0 license
-CFFT = -lfftw3 -lm
+CFFT = -L${HOME}/.local/lib -lfftw3 -lm 
 COBJ = -c
 OMP = -fopenmp
 ZIP = -lz
